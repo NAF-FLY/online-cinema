@@ -1,3 +1,4 @@
+import { GenreModule } from './genre/genre.module';
 import { UserModule } from './user/user.module';
 import { UserService } from './user/user.service';
 import { AuthModule } from './auth/auth.module';
@@ -10,6 +11,7 @@ import { getMongoDbConfig } from './config/mongo.config';
 
 @Module({
   imports: [
+    GenreModule,
     UserModule,
     AuthModule,
     ConfigModule.forRoot(),
