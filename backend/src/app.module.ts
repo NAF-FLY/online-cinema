@@ -1,3 +1,4 @@
+import { MovieModule } from './movie/movie.module';
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 
@@ -14,6 +15,7 @@ import { TypegooseModule } from 'nestjs-typegoose';
 
 @Module({
   imports: [
+    MovieModule,
     ConfigModule.forRoot(),
     TypegooseModule.forRootAsync({
       imports: [ConfigModule],
