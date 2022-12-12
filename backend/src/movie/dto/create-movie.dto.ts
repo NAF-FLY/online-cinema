@@ -1,4 +1,10 @@
-import { IsArray, IsBoolean, IsNumber, IsObject, IsString } from 'class-validator';
+import {
+  IsArray,
+  IsBoolean,
+  IsNumber,
+  IsObject,
+  IsString,
+} from 'class-validator';
 
 export class Parameters {
   @IsNumber()
