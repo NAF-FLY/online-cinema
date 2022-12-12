@@ -1,5 +1,7 @@
 import { Base, TimeStamps } from '@typegoose/typegoose/lib/defaultClasses';
 import { prop } from '@typegoose/typegoose/lib/prop';
+import { Ref } from '@typegoose/typegoose/lib/types';
+import { MovieModel } from 'src/movie/movie.model';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface UserModel extends Base {}
@@ -14,6 +16,6 @@ export class UserModel extends TimeStamps {
   @prop({ default: false })
   isAdmin: boolean;
 
-  @prop({ default: [] })
-  favorites?: [];
+  @prop({ default: [], ref: () => MovieModel })
+  favorites?: Ref<MovieModel>[];
 }
