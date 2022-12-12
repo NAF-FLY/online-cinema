@@ -15,7 +15,6 @@ import { TypegooseModule } from 'nestjs-typegoose';
 
 @Module({
   imports: [
-    MovieModule,
     ConfigModule.forRoot(),
     TypegooseModule.forRootAsync({
       imports: [ConfigModule],
@@ -23,6 +22,7 @@ import { TypegooseModule } from 'nestjs-typegoose';
       useFactory: getMongoDbConfig,
     }),
     GenreModule,
+    MovieModule,
     ActorModule,
     UserModule,
     AuthModule,
