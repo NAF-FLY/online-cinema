@@ -1,9 +1,15 @@
 import { FC } from 'react'
 
-import styles from './Navigation.module.scss'
+import Search from './Search/Search'
+import styles from './Sidebar.module.scss'
 
 const Sidebar: FC = () => {
-	return <div>Sidebar</div>
+	return (
+		<div className={styles.sidebar}>
+			<Search />
+			{/* movies container  */}
+		</div>
+	)
 }
 
 export default Sidebar
