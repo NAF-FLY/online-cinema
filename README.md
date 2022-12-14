@@ -5,6 +5,7 @@
 
 Frontend:
 - NextJS
+- Redux Toolkit
 - Typescript
 - ReactJS
 - SCSS
