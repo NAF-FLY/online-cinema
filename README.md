@@ -8,6 +8,7 @@ Frontend:
 - Redux Toolkit
 - Typescript
 - ReactJS
+- React Hook Form
 - SCSS
 - TailwindCSS
 - React Query (useMutation, useQuery)
