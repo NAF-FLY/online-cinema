@@ -12,6 +12,15 @@ $bar-width: 20%;
 
 	> div:first-child {
 		@apply left-0 border-r border-r-gray-800;
+		overflow: auto;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+		white-space: nowrap;
+
+		&::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+		}
 	}
 
 	> div:last-child {

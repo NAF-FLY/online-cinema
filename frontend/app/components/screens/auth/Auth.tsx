@@ -5,6 +5,7 @@ import Heading from '@/components/ui/heading/Heading'
 
 import Button from '@/ui/form-elements/Button'
 
+import { useActions } from '@/hooks/useActions'
 import { useAuth } from '@/hooks/useAuth'
 
 import Meta from '@/utils/meta/Meta'
@@ -30,12 +31,7 @@ const Auth: FC = () => {
 		mode: 'onChange',
 	})
 
-	const login = (data: any) => {
-		alert(`Login ${data}`)
-	}
-	const register = (data: any) => {
-		alert(`Register ${data}`)
-	}
+	const { login, register } = useActions()
 
 	const onSubmit: SubmitHandler<IAuthInput> = (data) => {
 		if (type === 'login') login(data)
